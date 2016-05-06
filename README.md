@@ -1,6 +1,10 @@
 # urm-tracer
 ###CMSC 141: URM Tracer
 
+###To run:
+```
+$> python urm.py mp1.in
+```
 
 ###MP1
 ###BC's URM Tracer

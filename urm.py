@@ -1,4 +1,9 @@
-inputfile = open('mp1.in')
+from sys import argv
+
+script, filename = argv
+
+#inputfile = open('mp1.in')
+inputfile = open(filename)
 outputfile = open('mp1.out', 'w')
 instructions = inputfile.readlines()
 register = []	#register array
@@ -16,7 +21,7 @@ for i in range(0, len(instructions[0])):
 del instructions[0]
 
 #initial print/write
-print register
+#print register
 outputfile.write(' '.join(register))
 
 #sets the first instruction to current line
@@ -53,7 +58,7 @@ while run:
 		register[int(curr_line[1])] = str(int(0))
 
 	#print/write
-	print register
+	#print register
 	outputfile.write(' '.join(register))
 
 	if isJ:
@@ -64,6 +69,8 @@ while run:
 			curr_line = instructions[pointer]
 		else:
 			run = False
+
+print "Output written in 'mp1.out'"
 
 inputfile.close()
 outputfile.close()
